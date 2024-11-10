@@ -11,7 +11,7 @@ const propiedadesJSON = [
       name: "Casa de playa",
       description: "Despierta tus días oyendo el oceano",
       src:
-        "https://media.chvnoticias.cl/2018/12/casas-en-la-playa-en-yucatan-2712.jpg",
+        "https://construir.com.pe/wp-content/uploads/2023/04/PLAYA3.jpg",
       rooms: 2,
       m: 130
     },
@@ -47,5 +47,30 @@ const propiedadesJSON = [
       rooms: 5,
       m: 500
     }
-  ];
-  
+];
+
+function despliegue(data) {
+  const mach = document.querySelector(".mach");
+  mach.innerHTML = data.length;
+  const propiedades = document.querySelector(".propiedades");
+  let html = ``;
+  for (propiedad of data){
+    html += `
+    <div class="propiedad">
+      <div class="img" style="background-image: url('${propiedad.src}')"></div>
+      <section>
+        <h5>${propiedad.name}</h5>
+        <div class="d-flex justify-content-between">
+          <p>Cuartos: ${propiedad.rooms}</p>
+          <p>Metros: ${propiedad.m}</p>
+        </div>
+          <p class="my-3">${propiedad.description}</p>
+          <button class="btn btn-info ">Ver más</button>
+      </section>
+    </div>  
+    `
+  };
+  propiedades.innerHTML = html;
+};
+
+despliegue(propiedadesJSON);
