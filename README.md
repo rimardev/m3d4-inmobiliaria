@@ -35,5 +35,3 @@ El propósito de este proyecto es **practicar y consolidar habilidades en JavaSc
 - **CSS3** para el diseño y estilo visual.
 - **JavaScript** para la lógica de filtrado y manipulación del DOM.
 
-## Uso
-
